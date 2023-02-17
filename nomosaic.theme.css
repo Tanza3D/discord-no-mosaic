@@ -1,0 +1,27 @@
+/**
+ * @name No Mosaic
+ * @author Tanza
+ * @description Removes the new Mosaic image preview
+ * @version 0.0.1
+*/
+
+.oneByTwoLayoutThreeGrid-3f_bkk, .oneByTwoGrid-25mx0i {
+    /* there's a minimum height set, so we have to force it to be super high so it doesn't crop the images */
+    max-height: 99999px;
+    /* always go down */
+    flex-direction: column;
+}
+.oneByTwoGrid-25mx0i .lazyImg-ewiNCh, .oneByTwoGrid-25mx0i .lazyImgContainer-3k3gRy {
+    /* stop forcing into an aspect ratio (this does the cropping) */
+    aspect-ratio: auto;
+}
+.clickableWrapper-2WTAkL img {
+    /* makes sure images don't take up the entire screen */
+    max-height: 400px !important;
+    /* add some padding to emulate the old spacing */
+    margin-bottom: 4px;
+}
+.mediaAttachmentsContainer-1WGRWy {
+    /* stop centering the items */
+    width: auto;
+}
