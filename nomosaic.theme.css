@@ -2,16 +2,18 @@
  * @name No Mosaic
  * @author Tanza
  * @description Removes the new Mosaic image preview
- * @version 0.0.1
+ * @version 0.0.2
 */
 
-.oneByTwoLayoutThreeGrid-3f_bkk, .oneByTwoGrid-25mx0i {
+.oneByTwoLayoutThreeGrid-3f_bkk, .oneByTwoGrid-25mx0i, .threeByThreeGrid-2CT4mS, .twoByTwoGrid-35pISX  {
+    /* some layouts use grid instead of flex, so set this just in case */
+    display: flex;
     /* there's a minimum height set, so we have to force it to be super high so it doesn't crop the images */
     max-height: 99999px;
     /* always go down */
     flex-direction: column;
 }
-.oneByTwoGrid-25mx0i .lazyImg-ewiNCh, .oneByTwoGrid-25mx0i .lazyImgContainer-3k3gRy {
+.oneByTwoGrid-25mx0i .lazyImg-ewiNCh, .oneByTwoGrid-25mx0i .lazyImgContainer-3k3gRy, .threeByThreeGrid-2CT4mS .lazyImg-ewiNCh, .threeByThreeGrid-2CT4mS .lazyImgContainer-3k3gRy, .twoByTwoGrid-35pISX .lazyImg-ewiNCh, .twoByTwoGrid-35pISX .lazyImgContainer-3k3gRy, .oneByOneGridMosaic-2fYTx0 .lazyImg-ewiNCh, .oneByOneGridMosaic-2fYTx0 .lazyImgContainer-3k3gRy {
     /* stop forcing into an aspect ratio (this does the cropping) */
     aspect-ratio: auto;
 }
