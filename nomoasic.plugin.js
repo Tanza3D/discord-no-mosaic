@@ -65,7 +65,7 @@ module.exports = class MyPlugin {
             for (var element of ellist) {
                 if (!element.hasAttribute("uncropped")) {
                     if (element.src != undefined) {
-                        if (element.src.includes("width=")) {
+                        if (element.src.includes("width=") && element.src.includes("/attachments/")) {
                             // ? only need to change if it it's forced width, else we just do a reload for no reason
                             element.src = element.src.split("?")[0];
                         }
