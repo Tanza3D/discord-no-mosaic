@@ -54,7 +54,7 @@ module.exports = class MyPlugin {
         document.body.appendChild(this.css);
 
         // Select the node that will be observed for mutations
-        const targetNode = document.getElementsByClassName("chat-2ZfjoI")[0];
+        const targetNode = document.body;
 
         // Options for the observer (which mutations to observe)
         const config = { attributes: true, childList: true, subtree: true };
