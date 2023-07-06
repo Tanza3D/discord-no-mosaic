@@ -32,10 +32,11 @@ module.exports = class MyPlugin {
             margin: 0px !important;
             /* margin on top to simulate old discord */
             margin-top: 3px !important;
+            border-radius: 4px !important;
         }
         .clickableWrapper-2WTAkL img {
             /* makes sure images don't take up the entire screen */
-            max-height: 400px !important;
+            max-height: 269px !important;
             /* add some padding to emulate the old spacing */
             margin-bottom: 4px;
             /* NEVER crop */
@@ -49,6 +50,11 @@ module.exports = class MyPlugin {
         .mediaAttachmentsContainer-1WGRWy {
             /* make images slightly smaller, i think this is okay */
             max-width: 500px;
+            border-radius: 0px !important;
+        }
+
+        .messageAttachmentMediaMosaic-2ic1yt {
+            border-radius: 0px !important;
         }
         `;
         document.body.appendChild(this.css);
