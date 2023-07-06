@@ -22,6 +22,7 @@ module.exports = class MyPlugin {
             max-height: 99999px;
             /* always go down */
             flex-direction: column;
+            border-radius: 0px !important;
         }
         .oneByTwoGrid-25mx0i .lazyImg-ewiNCh, .oneByTwoGrid-25mx0i .lazyImgContainer-3k3gRy, .threeByThreeGrid-2CT4mS .lazyImg-ewiNCh, .threeByThreeGrid-2CT4mS .lazyImgContainer-3k3gRy, .twoByTwoGrid-35pISX .lazyImg-ewiNCh, .twoByTwoGrid-35pISX .lazyImgContainer-3k3gRy, .oneByOneGridMosaic-2fYTx0 .lazyImg-ewiNCh, .oneByOneGridMosaic-2fYTx0 .lazyImgContainer-3k3gRy {
             /* stop forcing into an aspect ratio (this does the cropping) */
@@ -32,7 +33,7 @@ module.exports = class MyPlugin {
             margin: 0px !important;
             /* margin on top to simulate old discord */
             margin-top: 3px !important;
-            border-radius: 4px !important;
+            border-radius: 5px !important;
         }
         .clickableWrapper-2WTAkL img {
             /* makes sure images don't take up the entire screen */
@@ -41,10 +42,13 @@ module.exports = class MyPlugin {
             margin-bottom: 4px;
             /* NEVER crop */
             object-fit: contain !important;
+            min-width: unset !important;
+            border-radius: 5px !important;
         }
         .mediaAttachmentsContainer-1WGRWy {
             /* stop centering the items */
             width: auto;
+            border-radius: 0px !important;
         }
         
         .mediaAttachmentsContainer-1WGRWy {
@@ -53,7 +57,7 @@ module.exports = class MyPlugin {
             border-radius: 0px !important;
         }
 
-        .messageAttachmentMediaMosaic-2ic1yt {
+        .messageAttachmentMediaMosaic-2ic1yt, .oneByOneGridSingle-2ss-Zx {
             border-radius: 0px !important;
         }
         `;
