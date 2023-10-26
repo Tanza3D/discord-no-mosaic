@@ -22,6 +22,7 @@ module.exports = class MyPlugin {
             max-height: 99999px;
             /* always go down */
             flex-direction: column;
+            border-radius: 0px !important;
         }
         .oneByTwoGrid__44b90 .lazyImg_dafbb7, .oneByTwoGrid__44b90 .lazyImgContainer__68fa8, .threeByThreeGrid_d2750c .lazyImg_dafbb7, .threeByThreeGrid_d2750c .lazyImgContainer__68fa8, .twoByTwoGrid__47ed7 .lazyImg_dafbb7, .twoByTwoGrid__47ed7 .lazyImgContainer__68fa8, .oneByOneGridMosaic_afe3ca .lazyImg_dafbb7, .oneByOneGridMosaic_afe3ca .lazyImgContainer__68fa8 {
             /* stop forcing into an aspect ratio (this does the cropping) */
@@ -32,23 +33,31 @@ module.exports = class MyPlugin {
             margin: 0px !important;
             /* margin on top to simulate old discord */
             margin-top: 3px !important;
+            border-radius: 4px !important;
         }
         .clickableWrapper__64072 img {
             /* makes sure images don't take up the entire screen */
-            max-height: 400px !important;
+            max-height: 269px !important;
             /* add some padding to emulate the old spacing */
             margin-bottom: 4px;
             /* NEVER crop */
             object-fit: contain !important;
+            min-width: unset !important;
+            border-radius: 5px !important;
         }
         .mediaAttachmentsContainer_edba75 {
             /* stop centering the items */
             width: auto;
+            border-radius: 0px !important;
         }
         
         .mediaAttachmentsContainer_edba75 {
             /* make images slightly smaller, i think this is okay */
             max-width: 500px;
+            border-radius: 0px !important;
+        }
+        .messageAttachmentMediaMosaic__65bfc {
+            border-radius: 0px !important;
         }
         `;
         document.body.appendChild(this.css);
@@ -61,7 +70,7 @@ module.exports = class MyPlugin {
 
         // Callback function to execute when mutations are observed
         const callback = (mutationList, observer) => {
-            var ellist = document.querySelectorAll(".lazyImg-ewiNCh, .video-2HW4jD");
+            var ellist = document.querySelectorAll(".lazyImg_dafbb7, .video__4c052");
             for (var element of ellist) {
                 if (!element.hasAttribute("uncropped")) {
                     if (element.src != undefined) {
