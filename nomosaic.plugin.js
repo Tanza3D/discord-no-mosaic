@@ -19,7 +19,7 @@ module.exports = class MyPlugin {
             /* some layouts use grid instead of flex, so set this just in case */
             display: flex;
             /* there's a minimum height set, so we have to force it to be super high so it doesn't crop the images */
-            max-height: 99999px;
+            max-height: 9999px;
             /* always go down */
             flex-direction: column;
             border-radius: 0px !important;
@@ -27,8 +27,9 @@ module.exports = class MyPlugin {
         .oneByTwoGrid__44b90 .lazyImg_dafbb7, .oneByTwoGrid__44b90 .lazyImgContainer__68fa8, .threeByThreeGrid_d2750c .lazyImg_dafbb7, .threeByThreeGrid_d2750c .lazyImgContainer__68fa8, .twoByTwoGrid__47ed7 .lazyImg_dafbb7, .twoByTwoGrid__47ed7 .lazyImgContainer__68fa8, .oneByOneGridMosaic_afe3ca .lazyImg_dafbb7, .oneByOneGridMosaic_afe3ca .lazyImgContainer__68fa8 {
             /* stop forcing into an aspect ratio (this does the cropping) */
             aspect-ratio: auto;
-            /* don't force to a width, fixes tall images... */
+            /* don't force to a width OR to a height, fixes tall images... */
             width: auto !important;
+            height: auto !important;
             /* don't auto-center, keeps to left */
             margin: 0px !important;
             /* margin on top to simulate old discord */
@@ -37,7 +38,7 @@ module.exports = class MyPlugin {
         }
         .clickableWrapper__64072 img {
             /* makes sure images don't take up the entire screen */
-            max-height: 269px !important;
+            max-height: 350px !important;
             /* add some padding to emulate the old spacing */
             margin-bottom: 4px;
             /* NEVER crop */
