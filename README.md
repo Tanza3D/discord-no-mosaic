@@ -1,3 +1,8 @@
+# THIS PLUGIN DOES WORK!
+Contrary to the original repo's readme, this plugin does still operate as (mostly) intended. If anyone would like to submit a PR to fix anything, feel free, as I, like the original creator, do not know JS that well.
+
+# Original Description
+
 # THIS DOES NOT WORK ANYMORE
 i've gotten used to the mosaics at this point and this is too much effort to keep maintained when i just want to be able to talk to people and do my work. if someone wants to pr to fix anything, i'll happily review, but for now this is non functional for the most part. i don't know JS that well lol
 
