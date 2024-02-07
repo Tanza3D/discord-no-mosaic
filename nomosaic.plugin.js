@@ -80,7 +80,7 @@ module.exports = class MyPlugin {
                     if (element.src != undefined) {
                         if (element.src.includes("width=") && element.src.includes("/attachments/")) {
                             // ? only need to change if it it's forced width, else we just do a reload for no reason
-                            element.src = element.src.split("?")[0];
+                            element.src = element.src.split("&width")[0];
                         }
                     }
                     if (element.hasAttribute("poster")) {
