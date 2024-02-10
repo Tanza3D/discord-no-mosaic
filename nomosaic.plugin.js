@@ -84,7 +84,7 @@ module.exports = class MyPlugin {
                         }
                     }
                     if (element.hasAttribute("poster")) {
-                        element.setAttribute("poster", element.getAttribute("poster").split("?")[0] + "?format=jpeg")
+                        element.setAttribute("poster", element.getAttribute("poster").split("&format")[0] + "&format=jpeg")
                     }
                     element.setAttribute("uncropped", true);
                 }
