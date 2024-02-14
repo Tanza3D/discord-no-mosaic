@@ -4,8 +4,11 @@ Might be a little wonky on some image layouts, haven't tested them all. If you h
 
 ###### Before
 
-![image](https://github.com/KingGamingYT/discord-no-mosaic/assets/45918062/a30e820a-cd55-4299-a7da-d35fe84b016c)
+![image](https://github.com/KingGamingYT/discord-no-mosaic/assets/45918062/f212c22a-e36e-4370-8131-afa040078222)
+)
 
 ###### After
 
-![image](https://github.com/KingGamingYT/discord-no-mosaic/assets/45918062/a30e820a-cd55-4299-a7da-d35fe84b016c)
+![image](https://github.com/KingGamingYT/discord-no-mosaic/assets/45918062/bd0f2469-3c6e-4d38-a19e-be1e633a487e)
+![image](https://github.com/KingGamingYT/discord-no-mosaic/assets/45918062/dd02bb77-fc2d-48ef-98f1-03e8ebf91fd8)
+
