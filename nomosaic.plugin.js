@@ -1,8 +1,8 @@
 /**
  * @name NoMosaic
- * @author Tanza
+ * @author Tanza & KingGamingYT
  * @description No more mosaic!
- * @version 0.1.3
+ * @version 0.1.5
  */
 
 module.exports = class MyPlugin {
@@ -15,16 +15,16 @@ module.exports = class MyPlugin {
         var xhr = new XMLHttpRequest();
         this.css = document.createElement("style");
         this.css.innerHTML = `
-        .oneByTwoLayoutThreeGrid__5ec2c, .oneByTwoGrid__44b90, .threeByThreeGrid_d2750c, .twoByTwoGrid__47ed7  {
+        .oneByTwoLayoutThreeGrid__5ec2c, .oneByTwoGrid__44b90, .threeByThreeGrid_d2750c, .twoByTwoGrid__47ed7, .twoByOneGrid_b5fca2  {
             /* some layouts use grid instead of flex, so set this just in case */
-            display: flex;
+            display: flex !important;
             /* there's a minimum height set, so we have to force it to be super high so it doesn't crop the images */
             max-height: 99999px;
             /* always go down */
-            flex-direction: column;
+            flex-direction: column !important; 
             border-radius: 0px !important;
         }
-        .oneByTwoGrid__44b90 .lazyImg_dafbb7, .oneByTwoGrid__44b90 .lazyImgContainer__68fa8, .threeByThreeGrid_d2750c .lazyImg_dafbb7, .threeByThreeGrid_d2750c .lazyImgContainer__68fa8, .twoByTwoGrid__47ed7 .lazyImg_dafbb7, .twoByTwoGrid__47ed7 .lazyImgContainer__68fa8, .oneByOneGridMosaic_afe3ca .lazyImg_dafbb7, .oneByOneGridMosaic_afe3ca .lazyImgContainer__68fa8 {
+        .oneByTwoGrid__44b90 .lazyImg_dafbb7, .oneByTwoGrid__44b90 .lazyImgContainer__68fa8, .threeByThreeGrid_d2750c .lazyImg_dafbb7, .threeByThreeGrid_d2750c .lazyImgContainer__68fa8, .twoByTwoGrid__47ed7 .lazyImg_dafbb7, .twoByTwoGrid__47ed7 .lazyImgContainer__68fa8, .oneByOneGridMosaic_afe3ca .lazyImg_dafbb7, .oneByOneGridMosaic_afe3ca .lazyImgContainer__68fa8, .twoByOneGrid_b5fca2 {
             /* stop forcing into an aspect ratio (this does the cropping) */
             aspect-ratio: auto;
             /* don't force to a width OR to a height, fixes tall images... */
@@ -36,7 +36,7 @@ module.exports = class MyPlugin {
             margin-top: 3px !important;
             border-radius: 4px !important;
         }
-        .clickableWrapper__64072 img {
+        .clickableWrapper__64072 img, .video__4c052 {
             /* makes sure images don't take up the entire screen */
             max-height: 350px !important;
             /* add some padding to emulate the old spacing */
