@@ -36,7 +36,7 @@ module.exports = class MyPlugin {
             margin-top: 3px !important;
             border-radius: 4px !important;
         }
-        .clickableWrapper__64072 img, .video__4c052 {
+        .clickableWrapper__64072 img {
             /* makes sure images don't take up the entire screen */
             max-height: 350px !important;
             /* add some padding to emulate the old spacing */
@@ -47,6 +47,19 @@ module.exports = class MyPlugin {
             min-height: unset !important;
             border-radius: 5px !important;
             
+        }
+        .video__4c052, .wrapper__3a7a0, .imageWrapper_fd6587 {
+            /* apply everything to videos but separate their elements for potential future changes */
+            max-height: 350px !important;
+            max-width: fit-content !important;
+            overflow: hidden !important;
+            /* add some padding to emulate the old spacing */
+            margin-bottom: 4px;
+            /* NEVER crop */
+            object-fit: contain !important;
+            min-width: unset !important;
+            min-height: unset !important;
+            border-radius: 5px !important;
         }
         .mediaAttachmentsContainer_edba75 {
             /* stop centering the items */
@@ -85,6 +98,9 @@ module.exports = class MyPlugin {
                     }
                     if (element.hasAttribute("poster")) {
                         element.setAttribute("poster", element.getAttribute("poster").split("&format")[0] + "&format=jpeg")
+                    }
+                    if (element.hasAttribute("playsinline")) {
+                        element.setAttribute("playsinline", element.getAttribute("playsinline") + "true")
                     }
                     element.setAttribute("uncropped", true);
                 }
