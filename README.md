@@ -5,7 +5,6 @@ Might be a little wonky on some image layouts, haven't tested them all. If you h
 ###### Before
 
 ![image](https://github.com/KingGamingYT/discord-no-mosaic/assets/45918062/f212c22a-e36e-4370-8131-afa040078222)
-)
 
 ###### After
 
