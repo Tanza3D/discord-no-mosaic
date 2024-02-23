@@ -2,7 +2,7 @@
  * @name NoMosaic
  * @author Tanza & KingGamingYT
  * @description No more mosaic!
- * @version 0.1.5
+ * @version 0.1.7
  */
 
 module.exports = class MyPlugin {
@@ -36,7 +36,7 @@ module.exports = class MyPlugin {
             margin-top: 3px !important;
             border-radius: 4px !important;
         }
-        .clickableWrapper__64072 img {
+        .clickableWrapper__64072 img, loadingOverlay__4d818 img  {
             /* makes sure images don't take up the entire screen */
             max-height: 350px !important;
             /* add some padding to emulate the old spacing */
@@ -48,7 +48,7 @@ module.exports = class MyPlugin {
             border-radius: 5px !important;
             
         }
-        .video__4c052, .wrapper__3a7a0 {
+        .video__4c052[style*="max-width"], .wrapper__3a7a0 {
             /* apply everything to videos but separate their elements for potential future changes */
             max-height: 350px !important;
             max-width: fit-content !important;
@@ -103,6 +103,13 @@ module.exports = class MyPlugin {
                         element.setAttribute("playsinline", element.getAttribute("playsinline") + "true")
                     }
                     element.setAttribute("uncropped", true);
+                    var ellist2 = document.querySelectorAll(".loadingOverlay__4d818");
+                    for (var element of ellist2) {
+                        if (!element.hasAttribute("unratioed")) {
+                            element.setAttribute("style", "");
+                            element.setAttribute("unratioed", true);
+                        }
+                    }
                 }
             }
         };
