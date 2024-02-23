@@ -36,7 +36,7 @@ module.exports = class MyPlugin {
             margin-top: 3px !important;
             border-radius: 4px !important;
         }
-        .clickableWrapper__64072 img, loadingOverlay__4d818 img  {
+        .clickableWrapper__64072 img {
             /* makes sure images don't take up the entire screen */
             max-height: 350px !important;
             /* add some padding to emulate the old spacing */
