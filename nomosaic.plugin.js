@@ -48,7 +48,7 @@ module.exports = class MyPlugin {
             border-radius: 5px !important;
             
         }
-        .video__4c052[style*="max-width"], .wrapper__3a7a0 {
+        .video__4c052[style*="max-width"], .wrapper__3a7a0:not(.wrapperAudio__555ce) {
             /* apply everything to videos but separate their elements for potential future changes */
             max-height: 350px !important;
             max-width: fit-content !important;
