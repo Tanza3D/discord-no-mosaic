@@ -2,7 +2,9 @@
  * @name NoMosaic
  * @author Tanza & KingGamingYT
  * @description No more mosaic!
- * @version 0.1.7
+ * @version 0.1.8
+ * @source https://github.com/KingGamingYT/discord-no-mosaic
+ * @updateUrl https://raw.githubusercontent.com/KingGamingYT/discord-no-mosaic/main/nomosaic.plugin.js
  */
 
 module.exports = class MyPlugin {
