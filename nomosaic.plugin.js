@@ -111,6 +111,16 @@ module.exports = class MyPlugin {
                             element.setAttribute("unratioed", true);
                         }
                     }
+                    // This code is meant to be used with the UncompressedImages plugin, however, that plugin needs patches by its dev in order for this to work correctly. Until that happens, this'll stay commented
+                    /* var ellist3 = document.querySelectorAll(".lazyImg_dafbb7");
+                            for (var element of ellist3) {
+                                let srcWidthHeightRegex = /&width=\d+&height=\d+$/;
+                
+                                if (element.src && element.src.match(srcWidthHeightRegex)) {
+                                    let newSrc = element.src.replace(srcWidthHeightRegex, "");
+                                    element.src = newSrc;
+                                }
+                    } */
                 }
             }
         };
