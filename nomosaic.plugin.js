@@ -6,7 +6,7 @@
  * @source https://github.com/KingGamingYT/discord-no-mosaic
  */
 
-module.exports = class MyPlugin {
+module.exports = class NoMosaic {
     observer = null;
     css = null;
     constructor(meta) {
@@ -71,13 +71,13 @@ module.exports = class MyPlugin {
                 min-height: unset !important;
                 border-radius: 5px !important;
             }
-            .mediaAttachmentsContainer__242e2 {
+            .visualMediaItemContainer__582ad {
                 /* stop centering the items */
                 width: auto;
                 border-radius: 0px !important;
             }
             
-            .mediaAttachmentsContainer__242e2 {
+            .visualMediaItemContainer__582ad {
                 /* make images slightly smaller, i think this is okay */
                 max-width: 400px;
                 border-radius: 0px !important;
@@ -86,58 +86,6 @@ module.exports = class MyPlugin {
                 border-radius: 0px !important;
                 height: auto !important;
             }
-        }
-        .oneByTwoGrid__6987d .lazyImg_b510a9, .oneByTwoGrid__6987d .lazyImgContainer_b0a5df, .threeByThreeGrid__75d7e .lazyImg_b510a9, .threeByThreeGrid__75d7e .lazyImgContainer_b0a5df, .twoByTwoGrid__0e231 .lazyImg_b510a9, .twoByTwoGrid__0e231 .lazyImgContainer_b0a5df, .oneByOneGridMosaic__91851 .lazyImg_b510a9, .oneByOneGridMosaic__91851 .lazyImgContainer_b0a5df, .twoByOneGrid_fec677 {
-            /* stop forcing into an aspect ratio (this does the cropping) */
-            aspect-ratio: auto;
-            /* don't force to a width OR to a height, fixes tall images... */
-            width: auto !important;
-            height: min-content !important;
-            /* don't auto-center, keeps to left */
-            margin: 0px !important;
-            /* margin on top to simulate old discord */
-            margin-top: 3px !important;
-            border-radius: 4px !important;
-        }
-        .clickableWrapper__2d2ea img {
-            /* makes sure images don't take up the entire screen */
-            max-height: 350px !important;
-            /* add some padding to emulate the old spacing */
-            margin-bottom: 4px;
-            /* NEVER crop */
-            object-fit: contain !important;
-            min-width: unset !important;
-            min-height: unset !important;
-            border-radius: 5px !important;
-            
-        }
-        .video__83189[style*="max-width"], .wrapper_f09ac7:not(.wrapperAudio__178e9) {
-            /* apply everything to videos but separate their elements for potential future changes */
-            max-height: 350px !important;
-            max-width: fit-content !important;
-            overflow: hidden !important;
-            /* add some padding to emulate the old spacing */
-            margin-bottom: 4px;
-            /* NEVER crop */
-            object-fit: contain !important;
-            min-width: unset !important;
-            min-height: unset !important;
-            border-radius: 5px !important;
-        }
-        .mediaAttachmentsContainer__242e2 {
-            /* stop centering the items */
-            width: auto;
-            border-radius: 0px !important;
-        }
-        
-        .mediaAttachmentsContainer__242e2 {
-            /* make images slightly smaller, i think this is okay */
-            max-width: 400px;
-            border-radius: 0px !important;
-        }
-        .messageAttachmentMediaMosaic__67262 {
-            border-radius: 0px !important;
-            height: auto !important;
         }
         `;
         document.body.appendChild(this.css);
