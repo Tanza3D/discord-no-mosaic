@@ -71,13 +71,13 @@ module.exports = class NoMosaic {
                 min-height: unset !important;
                 border-radius: 5px !important;
             }
-            .visualMediaItemContainer__582ad {
+            .attachmentContentContainer_e65e75 {
                 /* stop centering the items */
                 width: auto;
                 border-radius: 0px !important;
             }
             
-            .visualMediaItemContainer__582ad {
+            .attachmentContentContainer_e65e75 {
                 /* make images slightly smaller, i think this is okay */
                 max-width: 400px;
                 border-radius: 0px !important;
