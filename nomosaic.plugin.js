@@ -34,7 +34,7 @@ module.exports = class NoMosaic {
                 flex-direction: column !important; 
                 border-radius: 0px !important;
             }
-            .oneByTwoGrid__6987d .lazyImg_b510a9, .oneByTwoGrid__6987d .lazyImgContainer_b0a5df, .threeByThreeGrid__75d7e .lazyImg_b510a9, .threeByThreeGrid__75d7e .lazyImgContainer_b0a5df, .twoByTwoGrid__0e231 .lazyImg_b510a9, .twoByTwoGrid__0e231 .lazyImgContainer_b0a5df, .oneByOneGridMosaic__91851 .lazyImg_b510a9, .oneByOneGridMosaic__91851 .lazyImgContainer_b0a5df, .twoByOneGrid_fec677 {
+            .oneByTwoGrid__6987d .lazyImg_b510a9, .oneByTwoGrid__6987d .lazyImgContainer_b0a5df, .threeByThreeGrid__75d7e .lazyImg_b510a9, .threeByThreeGrid__75d7e .lazyImgContainer_b0a5df, .twoByTwoGrid__0e231 .lazyImg_b510a9, .twoByTwoGrid__0e231 .lazyImgContainer_b0a5df, .oneByOneGridMosaic__91851 .lazyImg_b510a9, .oneByOneGridMosaic__91851 .lazyImgContainer_b0a5df, .oneByOneGridSingle__8c6ef .lazyImgContainer_b0a5df, .twoByOneGrid_fec677 {
                 /* stop forcing into an aspect ratio (this does the cropping) */
                 aspect-ratio: auto;
                 /* don't force to a width OR to a height, fixes tall images... */
